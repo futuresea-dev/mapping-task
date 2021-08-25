@@ -1,17 +1,18 @@
 # mapping-task
 
 
-# strip html tag function
-def strip_tags(html):
-    s = MLStripper()
-    s.feed(html)
-    return s.get_data()
+
+    ##
+    # strip html tag function
+    def strip_tags(html):
+        s = MLStripper()
+        s.feed(html)
+        return s.get_data()
 
 
-def main():
-    # define session
-    s = requests.Session()
-
+    def main():
+        # define session
+        s = requests.Session()
     # get all article list
     api_list_url = "https://mapping-test.fra1.digitaloceanspaces.com/data/list.json"
     r = s.get(api_list_url)
